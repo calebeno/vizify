@@ -1,0 +1,343 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'gulp',
+1 verbose cli   'gulp-concact',
+1 verbose cli   'gulp-jshint',
+1 verbose cli   'gulp-rename',
+1 verbose cli   'gulp-uglify' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'gulp', null ]
+6 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'gulp',
+7 verbose parsed url   path: 'gulp',
+7 verbose parsed url   href: 'gulp' }
+8 verbose cache add [ 'gulp-concact', null ]
+9 verbose cache add name=undefined spec="gulp-concact" args=["gulp-concact",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'gulp-concact',
+10 verbose parsed url   path: 'gulp-concact',
+10 verbose parsed url   href: 'gulp-concact' }
+11 verbose cache add [ 'gulp-jshint', null ]
+12 verbose cache add name=undefined spec="gulp-jshint" args=["gulp-jshint",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'gulp-jshint',
+13 verbose parsed url   path: 'gulp-jshint',
+13 verbose parsed url   href: 'gulp-jshint' }
+14 verbose cache add [ 'gulp-rename', null ]
+15 verbose cache add name=undefined spec="gulp-rename" args=["gulp-rename",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'gulp-rename',
+16 verbose parsed url   path: 'gulp-rename',
+16 verbose parsed url   href: 'gulp-rename' }
+17 verbose cache add [ 'gulp-uglify', null ]
+18 verbose cache add name=undefined spec="gulp-uglify" args=["gulp-uglify",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'gulp-uglify',
+19 verbose parsed url   path: 'gulp-uglify',
+19 verbose parsed url   href: 'gulp-uglify' }
+20 silly lockFile 9750c68d-gulp gulp
+21 verbose lock gulp /Users/scott/.npm/9750c68d-gulp.lock
+22 silly lockFile 1ac803b8-gulp-concact gulp-concact
+23 verbose lock gulp-concact /Users/scott/.npm/1ac803b8-gulp-concact.lock
+24 silly lockFile aeb19f3d-gulp-jshint gulp-jshint
+25 verbose lock gulp-jshint /Users/scott/.npm/aeb19f3d-gulp-jshint.lock
+26 silly lockFile 8ff38cb7-gulp-rename gulp-rename
+27 verbose lock gulp-rename /Users/scott/.npm/8ff38cb7-gulp-rename.lock
+28 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+29 verbose lock gulp-uglify /Users/scott/.npm/15fab96b-gulp-uglify.lock
+30 silly lockFile 9750c68d-gulp gulp
+31 silly lockFile 9750c68d-gulp gulp
+32 silly lockFile 1ac803b8-gulp-concact gulp-concact
+33 silly lockFile 1ac803b8-gulp-concact gulp-concact
+34 verbose addNamed [ 'gulp', '' ]
+35 verbose addNamed [ null, '*' ]
+36 silly lockFile 72f4391e-gulp gulp@
+37 verbose lock gulp@ /Users/scott/.npm/72f4391e-gulp.lock
+38 silly lockFile aeb19f3d-gulp-jshint gulp-jshint
+39 silly lockFile aeb19f3d-gulp-jshint gulp-jshint
+40 verbose addNamed [ 'gulp-concact', '' ]
+41 verbose addNamed [ null, '*' ]
+42 silly lockFile d6a31344-gulp-concact gulp-concact@
+43 verbose lock gulp-concact@ /Users/scott/.npm/d6a31344-gulp-concact.lock
+44 silly lockFile 8ff38cb7-gulp-rename gulp-rename
+45 silly lockFile 8ff38cb7-gulp-rename gulp-rename
+46 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+47 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+48 verbose addNamed [ 'gulp-jshint', '' ]
+49 verbose addNamed [ null, '*' ]
+50 silly lockFile 8b36bbde-gulp-jshint gulp-jshint@
+51 verbose lock gulp-jshint@ /Users/scott/.npm/8b36bbde-gulp-jshint.lock
+52 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+53 verbose addNamed [ 'gulp-rename', '' ]
+54 verbose addNamed [ null, '*' ]
+55 silly lockFile 81aa0665-gulp-rename gulp-rename@
+56 verbose lock gulp-rename@ /Users/scott/.npm/81aa0665-gulp-rename.lock
+57 verbose addNamed [ 'gulp-uglify', '' ]
+58 verbose addNamed [ null, '*' ]
+59 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+60 verbose lock gulp-uglify@ /Users/scott/.npm/044a9113-gulp-uglify.lock
+61 silly addNameRange { name: 'gulp-concact', range: '*', hasData: false }
+62 silly addNameRange { name: 'gulp-jshint', range: '*', hasData: false }
+63 verbose request where is /gulp-concact
+64 verbose request registry https://registry.npmjs.org/
+65 verbose request id 11dfb50b85d54dc9
+66 verbose url raw /gulp-concact
+67 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-concact' ]
+68 verbose url resolved https://registry.npmjs.org/gulp-concact
+69 verbose request where is https://registry.npmjs.org/gulp-concact
+70 info trying registry request attempt 1 at 09:46:19
+71 http GET https://registry.npmjs.org/gulp-concact
+72 silly addNameRange { name: 'gulp-rename', range: '*', hasData: false }
+73 silly addNameRange { name: 'gulp-uglify', range: '*', hasData: false }
+74 verbose registry.get https://registry.npmjs.org/gulp not expired, no request
+75 silly addNameRange number 2 { name: 'gulp', range: '*', hasData: true }
+76 silly addNameRange versions [ 'gulp',
+76 silly addNameRange   [ '0.0.1',
+76 silly addNameRange     '0.0.2',
+76 silly addNameRange     '0.0.3',
+76 silly addNameRange     '0.0.4',
+76 silly addNameRange     '0.0.5',
+76 silly addNameRange     '0.0.7',
+76 silly addNameRange     '0.0.8',
+76 silly addNameRange     '0.0.9',
+76 silly addNameRange     '0.1.0',
+76 silly addNameRange     '0.2.0',
+76 silly addNameRange     '1.0.0',
+76 silly addNameRange     '1.1.0',
+76 silly addNameRange     '1.2.0',
+76 silly addNameRange     '1.2.1',
+76 silly addNameRange     '2.0.0',
+76 silly addNameRange     '2.0.1',
+76 silly addNameRange     '2.1.0',
+76 silly addNameRange     '2.2.0',
+76 silly addNameRange     '2.3.0',
+76 silly addNameRange     '2.4.0',
+76 silly addNameRange     '2.4.1',
+76 silly addNameRange     '2.6.0',
+76 silly addNameRange     '2.6.1',
+76 silly addNameRange     '2.7.0',
+76 silly addNameRange     '3.0.0',
+76 silly addNameRange     '3.1.1',
+76 silly addNameRange     '3.1.2',
+76 silly addNameRange     '3.1.3',
+76 silly addNameRange     '3.1.4',
+76 silly addNameRange     '3.2.0',
+76 silly addNameRange     '3.2.1',
+76 silly addNameRange     '3.2.2',
+76 silly addNameRange     '3.2.3',
+76 silly addNameRange     '3.2.4',
+76 silly addNameRange     '3.2.5',
+76 silly addNameRange     '3.3.0',
+76 silly addNameRange     '3.3.1',
+76 silly addNameRange     '3.3.2',
+76 silly addNameRange     '3.3.4',
+76 silly addNameRange     '3.4.0',
+76 silly addNameRange     '3.5.0',
+76 silly addNameRange     '3.5.1',
+76 silly addNameRange     '3.5.2',
+76 silly addNameRange     '3.5.5',
+76 silly addNameRange     '3.5.6',
+76 silly addNameRange     '3.6.0',
+76 silly addNameRange     '3.6.1',
+76 silly addNameRange     '3.6.2',
+76 silly addNameRange     '3.7.0',
+76 silly addNameRange     '3.8.0',
+76 silly addNameRange     '3.8.1',
+76 silly addNameRange     '3.8.2',
+76 silly addNameRange     '3.8.3',
+76 silly addNameRange     '3.8.4',
+76 silly addNameRange     '3.8.5',
+76 silly addNameRange     '3.8.6',
+76 silly addNameRange     '3.8.7',
+76 silly addNameRange     '3.8.8',
+76 silly addNameRange     '3.8.9',
+76 silly addNameRange     '3.8.10',
+76 silly addNameRange     '3.8.11' ] ]
+77 verbose addNamed [ 'gulp', '3.8.11' ]
+78 verbose addNamed [ '3.8.11', '3.8.11' ]
+79 silly lockFile 3d31ec08-gulp-3-8-11 gulp@3.8.11
+80 verbose lock gulp@3.8.11 /Users/scott/.npm/3d31ec08-gulp-3-8-11.lock
+81 verbose registry.get https://registry.npmjs.org/gulp-jshint not expired, no request
+82 silly addNameRange number 2 { name: 'gulp-jshint', range: '*', hasData: true }
+83 silly addNameRange versions [ 'gulp-jshint',
+83 silly addNameRange   [ '0.0.1',
+83 silly addNameRange     '0.1.0',
+83 silly addNameRange     '1.0.0',
+83 silly addNameRange     '1.1.0',
+83 silly addNameRange     '1.2.0',
+83 silly addNameRange     '1.3.0',
+83 silly addNameRange     '1.3.1',
+83 silly addNameRange     '1.3.2',
+83 silly addNameRange     '1.3.3',
+83 silly addNameRange     '1.3.4',
+83 silly addNameRange     '1.4.0',
+83 silly addNameRange     '1.4.1',
+83 silly addNameRange     '1.4.2',
+83 silly addNameRange     '1.5.0',
+83 silly addNameRange     '1.5.1',
+83 silly addNameRange     '1.5.2',
+83 silly addNameRange     '1.5.3',
+83 silly addNameRange     '1.5.4',
+83 silly addNameRange     '1.5.5',
+83 silly addNameRange     '1.5.6',
+83 silly addNameRange     '1.6.0',
+83 silly addNameRange     '1.6.1',
+83 silly addNameRange     '1.6.2',
+83 silly addNameRange     '1.6.3',
+83 silly addNameRange     '1.6.4',
+83 silly addNameRange     '1.7.0',
+83 silly addNameRange     '1.7.1',
+83 silly addNameRange     '1.8.0',
+83 silly addNameRange     '1.8.1',
+83 silly addNameRange     '1.8.2',
+83 silly addNameRange     '1.8.3',
+83 silly addNameRange     '1.8.4',
+83 silly addNameRange     '1.8.5',
+83 silly addNameRange     '1.8.6',
+83 silly addNameRange     '1.9.0',
+83 silly addNameRange     '1.9.2',
+83 silly addNameRange     '1.9.3',
+83 silly addNameRange     '1.9.4',
+83 silly addNameRange     '1.10.0' ] ]
+84 verbose addNamed [ 'gulp-jshint', '1.10.0' ]
+85 verbose addNamed [ '1.10.0', '1.10.0' ]
+86 silly lockFile 4defc810-gulp-jshint-1-10-0 gulp-jshint@1.10.0
+87 verbose lock gulp-jshint@1.10.0 /Users/scott/.npm/4defc810-gulp-jshint-1-10-0.lock
+88 verbose registry.get https://registry.npmjs.org/gulp-rename not expired, no request
+89 silly addNameRange number 2 { name: 'gulp-rename', range: '*', hasData: true }
+90 silly addNameRange versions [ 'gulp-rename',
+90 silly addNameRange   [ '0.1.0', '0.2.1', '0.2.2', '1.0.0', '1.1.0', '1.2.0', '1.2.2' ] ]
+91 verbose addNamed [ 'gulp-rename', '1.2.2' ]
+92 verbose addNamed [ '1.2.2', '1.2.2' ]
+93 silly lockFile 36a270fc-gulp-rename-1-2-2 gulp-rename@1.2.2
+94 verbose lock gulp-rename@1.2.2 /Users/scott/.npm/36a270fc-gulp-rename-1-2-2.lock
+95 verbose registry.get https://registry.npmjs.org/gulp-uglify not expired, no request
+96 silly addNameRange number 2 { name: 'gulp-uglify', range: '*', hasData: true }
+97 silly addNameRange versions [ 'gulp-uglify',
+97 silly addNameRange   [ '0.0.1',
+97 silly addNameRange     '0.0.3',
+97 silly addNameRange     '0.0.4',
+97 silly addNameRange     '0.1.0',
+97 silly addNameRange     '0.2.0',
+97 silly addNameRange     '0.2.1',
+97 silly addNameRange     '0.3.0',
+97 silly addNameRange     '0.3.1',
+97 silly addNameRange     '0.3.2',
+97 silly addNameRange     '1.0.0-0',
+97 silly addNameRange     '1.0.0',
+97 silly addNameRange     '1.0.1',
+97 silly addNameRange     '1.0.2',
+97 silly addNameRange     '1.1.0',
+97 silly addNameRange     '1.2.0' ] ]
+98 verbose addNamed [ 'gulp-uglify', '1.2.0' ]
+99 verbose addNamed [ '1.2.0', '1.2.0' ]
+100 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
+101 verbose lock gulp-uglify@1.2.0 /Users/scott/.npm/9d272576-gulp-uglify-1-2-0.lock
+102 silly lockFile 3d31ec08-gulp-3-8-11 gulp@3.8.11
+103 silly lockFile 3d31ec08-gulp-3-8-11 gulp@3.8.11
+104 silly lockFile 4defc810-gulp-jshint-1-10-0 gulp-jshint@1.10.0
+105 silly lockFile 4defc810-gulp-jshint-1-10-0 gulp-jshint@1.10.0
+106 silly lockFile 72f4391e-gulp gulp@
+107 silly lockFile 72f4391e-gulp gulp@
+108 silly lockFile 36a270fc-gulp-rename-1-2-2 gulp-rename@1.2.2
+109 silly lockFile 36a270fc-gulp-rename-1-2-2 gulp-rename@1.2.2
+110 silly lockFile 8b36bbde-gulp-jshint gulp-jshint@
+111 silly lockFile 8b36bbde-gulp-jshint gulp-jshint@
+112 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
+113 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
+114 silly lockFile 81aa0665-gulp-rename gulp-rename@
+115 silly lockFile 81aa0665-gulp-rename gulp-rename@
+116 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+117 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+118 http 404 https://registry.npmjs.org/gulp-concact
+119 verbose headers { date: 'Thu, 16 Apr 2015 13:45:31 GMT',
+119 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+119 verbose headers   'content-type': 'application/json',
+119 verbose headers   'cache-control': 'max-age=0',
+119 verbose headers   'content-length': '51',
+119 verbose headers   'accept-ranges': 'bytes',
+119 verbose headers   via: '1.1 varnish',
+119 verbose headers   age: '0',
+119 verbose headers   'x-served-by': 'cache-atl6226-ATL',
+119 verbose headers   'x-cache': 'MISS',
+119 verbose headers   'x-cache-hits': '0',
+119 verbose headers   'x-timer': 'S1429191931.569894,VS0,VE80',
+119 verbose headers   'keep-alive': 'timeout=10, max=50',
+119 verbose headers   connection: 'Keep-Alive' }
+120 silly registry.get cb [ 404,
+120 silly registry.get   { date: 'Thu, 16 Apr 2015 13:45:31 GMT',
+120 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+120 silly registry.get     'content-type': 'application/json',
+120 silly registry.get     'cache-control': 'max-age=0',
+120 silly registry.get     'content-length': '51',
+120 silly registry.get     'accept-ranges': 'bytes',
+120 silly registry.get     via: '1.1 varnish',
+120 silly registry.get     age: '0',
+120 silly registry.get     'x-served-by': 'cache-atl6226-ATL',
+120 silly registry.get     'x-cache': 'MISS',
+120 silly registry.get     'x-cache-hits': '0',
+120 silly registry.get     'x-timer': 'S1429191931.569894,VS0,VE80',
+120 silly registry.get     'keep-alive': 'timeout=10, max=50',
+120 silly registry.get     connection: 'Keep-Alive' } ]
+121 silly lockFile d6a31344-gulp-concact gulp-concact@
+122 silly lockFile d6a31344-gulp-concact gulp-concact@
+123 error 404 404 Not Found: gulp-concact
+123 error 404
+123 error 404 'gulp-concact' is not in the npm registry.
+123 error 404 You should bug the author to publish it
+123 error 404 It was specified as a dependency of 'vizify'
+123 error 404
+123 error 404 Note that you can also install from a
+123 error 404 tarball, folder, or http url, or git url.
+124 error System Darwin 14.1.0
+125 error command "node" "/usr/local/bin/npm" "install" "gulp" "gulp-concact" "gulp-jshint" "gulp-rename" "gulp-uglify"
+126 error cwd /Users/scott/workspaces/github/vizify
+127 error node -v v0.10.32
+128 error npm -v 1.4.28
+129 error code E404
+130 verbose exit [ 1, true ]

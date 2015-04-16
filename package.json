@@ -1,0 +1,32 @@
+{
+  "name": "vizify",
+  "version": "0.1.0",
+  "description": "A simple wrapper library for Google Charts or D3",
+  "main": "vizify.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "testem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:icctechnology/vizify.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icctechnology/vizify/issues"
+  },
+  "homepage": "https://github.com/icctechnology/vizify",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.1.0",
+    "jshint": "^2.6.3",
+    "testem": "^0.8.0-0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "vizify",
+  "description": "A simple wrapper library for Google Charts or D3",
+  "homepage": "https://github.com/icctechnology/vizify",
+  "version": "0.1.0",
+  "main": "vizify.js",
+  "keywords": [
+    "d3",
+    "google charts",
+    "wrapper",
+    "client",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "examples",
+    "test",
+    "gulpfile.js",
+    "README.md",
+    "LICENSE.md",
+    "package.json",
+    ".*",
+    "*.yml"
+  ]
+}

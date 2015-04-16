@@ -1,0 +1,7 @@
+{
+  "framework": "jasmine2",
+  "src_files": [
+    "vizify.js",
+    "test/vizify-spec.js"
+  ]
+}
