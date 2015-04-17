@@ -47,9 +47,11 @@ var Vizify = {
         var self = this;
         clearInterval(this.loadingInterval);
         google.load("visualization", "1",
-            {callback: function () {
-                self.loadData(data);
-            }, packages: [self.chartType]});
+            {
+                callback: function () {
+                    self.loadData(data);
+                }, packages: [self.chartType]
+            });
     },
 
     loadData: function (data) {
