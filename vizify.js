@@ -1,6 +1,6 @@
 //     ICC Vizify 0.1.0
 //     http://icctechnology.github.io
-//     (c) 2015 Informatation Control Corperation
+//     (c) 2015 Inform atation Control Corperation
 //     Vizify may be freely distributed under the MIT license.
 var Vizify = {
 
@@ -55,13 +55,22 @@ var Vizify = {
     },
 
     loadData: function (data) {
-        var container = document.querySelector(this.hook);
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({type: 'string', id: data.columnName});
-        dataTable.addColumn({type: 'date', id: 'Start'});
-        dataTable.addColumn({type: 'date', id: 'End'});
-        dataTable.addRows(data.rows);
-        chart.draw(dataTable);
+
+        var self = this;
+        var V = {
+            google: {
+                timeline: function (data) {
+                    var container = document.querySelector(self.hook);
+                    var chart = new google.visualization.Timeline(container);
+                    var dataTable = new google.visualization.DataTable();
+                    dataTable.addColumn({type: 'string', id: data.columnName});
+                    dataTable.addColumn({type: 'date', id: 'Start'});
+                    dataTable.addColumn({type: 'date', id: 'End'});
+                    dataTable.addRows(data.rows);
+                    chart.draw(dataTable);
+                }
+            }
+        };
+        V[this.libType][this.chartType](data);
     }
 };
