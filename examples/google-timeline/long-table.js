@@ -1,6 +1,6 @@
 Vizify.init({library: "google", type: "timeline"});
-parse({selector: ".testTable", nameIndex: 0, startIndex: 1, endIndex: 2}, function (options) {
-    Vizify.load(options);
+parse({selector: ".testTable", nameIndex: 0, startIndex: 1, endIndex: 2}, function (data) {
+    Vizify.load(data)
 });
 
 function parse(options, callback) {
@@ -9,7 +9,7 @@ function parse(options, callback) {
         var nameIndex = options.nameIndex;
         var startIndex = options.startIndex;
         var endIndex = options.endIndex;
-        var rows = [];
+        var rows = []
         var trs = document.querySelectorAll(selector + " tr");
         for (var i = 1; i < trs.length; i++) {
             var tds = trs[i].children;

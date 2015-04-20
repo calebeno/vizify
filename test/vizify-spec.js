@@ -4,6 +4,7 @@ describe('vizify `to exist`', function () {
     });
 });
 
+
 describe('vizify loadExt', function () {
     it('should load an external file', function () {
         var options = {
@@ -17,17 +18,30 @@ describe('vizify loadExt', function () {
     });
 });
 
-describe('vizify load', function () {
-    it('should create a set an interval', function () {
+describe('vizify googleLoadedEvent', function () {
+    it('should dispatch an event', function () {
         var options = {
             library: "google",
             type: "timeline",
             hook: "someClass"
         };
-        spyOn(window, "setInterval").and.callThrough();
-        Vizify.loading = false;
-        Vizify.load({});
-        expect(window.setInterval).toHaveBeenCalled();
+        spyOn(document, "dispatchEvent");
+        Vizify.googleLoadedEvent();
+        expect(document.dispatchEvent).toHaveBeenCalled();
+    });
+});
+
+describe('vizify googleLoadedSubscribe', function () {
+    it('should call googleLoadedSubscribe method', function () {
+        var options = {
+            library: "google",
+            type: "timeline",
+            hook: "someClass"
+        };
+        spyOn(Vizify, "loadVisualization");
+        Vizify.googleLoadedSubscribe();
+        expect(Vizify.loadVisualization).toHaveBeenCalled();
+
     });
 });
 
@@ -49,38 +63,76 @@ describe('vizify loadExt', function () {
     });
 });
 
-describe('vizify visualization', function () {
-    it('should clear an interval', function () {
+describe('vizify load', function () {
+    it('should push to hooks and data array', function () {
         var options = {
             library: "google",
-            type: "timeline",
-            hook: "someClass"
+            type: "timeline"
         };
-        window["google"] = {load: function () {
-        }};
-        spyOn(window, "clearInterval");
-        Vizify.loadVisualization({});
-        expect(window.clearInterval).toHaveBeenCalled();
+        spyOn(Vizify.data, "push");
+        spyOn(Vizify.hooks, "push");
+        Vizify.init(options);
+        Vizify.load({data: {}, hooks: {}});
+        expect(Vizify.data.push).toHaveBeenCalled();
+        expect(Vizify.hooks.push).toHaveBeenCalled();
     });
-
 });
 
-describe('vizify load data', function () {
-    it('should add columns and rows', function () {
+describe('vizify loadVisualization', function () {
+    it('should load google visualization', function () {
         var options = {
             library: "google",
-            type: "timeline",
-            hook: "someClass"
+            type: "timeline"
         };
         window.google = {};
+        window.google.load = function () {
+        }
+        spyOn(window.google, "load");
+        Vizify.init(options);
+        Vizify.loadVisualization();
+        expect(window.google.load).toHaveBeenCalled();
+    });
+});
+
+describe('vizify loadData', function () {
+    it('should call a function based on names', function () {
+        var options = {
+            library: "google",
+            type: "timeline"
+        };
+        Vizify.init(options);
+        Vizify.load({data: {}, hook: "#time"});
+        spyOn(Vizify, "renderGoogleTimeline");
+        Vizify.loadData();
+        expect(Vizify.renderGoogleTimeline).toHaveBeenCalled();
+
+    });
+});
+
+
+describe('vizify renderGoogleTimeline', function () {
+    it('should call render a google timeline', function () {
+        var options = {
+            library: "google",
+            type: "timeline"
+        };
+        Vizify.init(options);
+        Vizify.load({data: {}, hook: "#time"});
+        window.google = {};
         window.google.visualization = {};
-        window.google.visualization.Timeline = function (){};
-        window.google.visualization.Timeline.prototype.draw = function() {};
-        window.google.visualization.DataTable = function (){};
-        window.google.visualization.DataTable.prototype.addColumn = function(a){};
-        window.google.visualization.DataTable.prototype.addRows = function(a){};
-        spyOn(window.google.visualization.Timeline.prototype , "draw");
-        Vizify.loadData({columnName: "foo", rows: [1, 2, 3]});
+        window.google.visualization.Timeline = function () {
+        };
+        window.google.visualization.Timeline.prototype.draw = function () {
+        };
+        window.google.visualization.DataTable = function () {
+        };
+        window.google.visualization.DataTable.prototype.addColumn = function (a) {
+        };
+        window.google.visualization.DataTable.prototype.addRows = function (a) {
+        };
+        spyOn(window.google.visualization.Timeline.prototype, "draw");
+        Vizify.renderGoogleTimeline([{columnName: "test", rows: [1, 2, 3]}], ["#time"]);
         expect(window.google.visualization.Timeline.prototype.draw).toHaveBeenCalled();
+
     });
 });

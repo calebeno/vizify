@@ -2,34 +2,44 @@
 //     http://icctechnology.github.io
 //     (c) 2015 Inform atation Control Corperation
 //     Vizify may be freely distributed under the MIT license.
-var Vizify = {
 
-    loading: true,
-    loadingInterval: null,
+var Vizify = {
     chartType: null,
     libType: null,
-    hook: null,
+    hooks: [],
+    data: [],
+    chartLoader: {},
 
     init: function (options) {
         options = options || {};
         this.libType = options.library || "";
         this.chartType = options.type || "";
         this.hook = options.hook || "";
-        var self = this;
         if (this.libType === "google") {
-            this.loadExt("https://www.google.com/jsapi", function () {
-                self.loading = false;
-            });
+            this.loadExt("https://www.google.com/jsapi", this.googleLoadedEvent);
         }
+        var self = this;
+        document.addEventListener("googleLoaded", function () {
+            self.googleLoadedSubscribe();
+        });
     },
 
-    load: function (data) {
+    googleLoadedEvent: function () {
+        var event = new Event('googleLoaded');
+        document.dispatchEvent(event); // when google loads
+    },
+
+    googleLoadedSubscribe: function () {
         var self = this;
-        this.loadingInterval = setInterval(function () {
-            if (!self.loading) {
-                self.loadVisualization(data);
-            }
-        }, 10);
+        this.loadVisualization(function () {
+            self.loadData();
+        });
+
+    },
+
+    load: function (options) {
+        this.data.push(options.data);
+        this.hooks.push(options.hook);
     },
 
     loadExt: function (url, callback) {
@@ -43,34 +53,34 @@ var Vizify = {
         };
     },
 
-    loadVisualization: function (data) {
+    loadVisualization: function (callback) {
         var self = this;
-        clearInterval(this.loadingInterval);
-        google.load("visualization", "1",
-            {
-                callback: function () {
-                    self.loadData(data);
-                }, packages: [self.chartType]
-            });
+        google.load("visualization", "1", {
+            callback: function () {
+                callback();
+            }, packages: [self.chartType]
+        });
     },
 
-    loadData: function (data) {
+    loadData: function () {
+        if (this.libType === "google" && this.chartType === "timeline") {
+            this.renderGoogleTimeline(this.data, this.hooks);
+        }
+    },
 
-        var self = this;
-        var V = {
-            google: {
-                timeline: function (data) {
-                    var container = document.querySelector(self.hook);
-                    var chart = new google.visualization.Timeline(container);
-                    var dataTable = new google.visualization.DataTable();
-                    dataTable.addColumn({type: 'string', id: data.columnName});
-                    dataTable.addColumn({type: 'date', id: 'Start'});
-                    dataTable.addColumn({type: 'date', id: 'End'});
-                    dataTable.addRows(data.rows);
-                    chart.draw(dataTable);
-                }
-            }
-        };
-        V[this.libType][this.chartType](data);
+    renderGoogleTimeline: function (d, h) {
+        for (var i = 0; i < d.length; i++) {
+            var data = d[i];
+            var hook = h[i];
+            var container = document.querySelector(hook);
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+            dataTable.addColumn({type: 'string', id: data.columnName});
+            dataTable.addColumn({type: 'date', id: 'Start'});
+            dataTable.addColumn({type: 'date', id: 'End'});
+            dataTable.addRows(data.rows);
+            chart.draw(dataTable);
+        }
     }
+
 };
